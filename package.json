@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "alpinejs": "^3.17.5",
+    "htmx.org": "^2.0.11",
+    "tailwindcss": "^4.3.3"
+  },
+  "name": "aritno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev_tailwind": "npx @tailwindcss/cli -i ./static/css/input.css -o ./static/css/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

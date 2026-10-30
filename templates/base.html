@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ project_description }}">
+    <meta name="keywords" content="{{ project_keywords }}">
+    <meta name="author" content="{{ project_author }}">
+    <meta name="robots" content="{% block robots %}{% endblock robots %}">
+    <meta name="theme-color" content="{{ project_color }}">
+    <meta name="color-scheme" content="light dark">
+
+    {% comment %} open group / social media {% endcomment %}
+    <meta property="og:title" content="{{ project_name }}">
+    <meta property="og:description" content="{{ project_description }}">
+    <meta property="og:image" content="{{ project_cover }}">
+    <meta property="og:url" content="{{ project_url }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    {% comment %} title {% endcomment %}
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="canonical" href="{{ project_url }}">
+
+    {% comment %} app css {% endcomment %}
+    <link rel="stylesheet" href="{% static "./css/app.css" %}">
+
+    {% comment %} block other css {% endcomment %}
+    {% block css %}{% endblock css %}
+</head>
+<body>
+
+    {% comment %} include header {% endcomment %}
+    {% include "./includes/header.html" %}
+
+    {% comment %} block contents {% endcomment %}
+    <main id="main">
+        {% block contents %}{% endblock contents %}
+    </main>
+
+    {% comment %} include footer {% endcomment %}
+    {% include "./includes/footer.html" %}
+    
+    {% comment %} alpine {% endcomment %}
+    <script defer src="{% static "./js/alpine.js" %}"></script>
+
+    {% comment %} htmx {% endcomment %}
+    <script defer src="{% static "./js/htmx.js" %}"></script>
+
+    {% comment %} app js {% endcomment %}
+    <script defer src="{% static "./js/app.js" %}"></script>
+
+    {% comment %} block other js {% endcomment %}
+    {% block js %}{% endblock js %}
+</body>
+</html>
