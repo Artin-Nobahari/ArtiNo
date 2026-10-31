@@ -1,0 +1,60 @@
+/* light theme */
+[data-theme="light"] {
+    --body-bg: ;
+    --text: ;
+    --text-paragraph: ;
+
+    --header-bg: ;
+    --header-border: ;
+    --header-shadow: ;
+
+    --footer-bg: ;
+    --footer-border: ;
+    --footer-shadow: ;
+
+    --btn-bg: ;
+    --btn-border: ;
+    --btn-hover: ;
+    --btn-active: ;
+    --btn-focus: ;
+    --btn-shadow: ;
+
+    --modal-bg: ;
+    --modal-border: ;
+    --modal-hover: ;
+    --modal-active: ;
+    --modal-focus: ;
+    --modal-shadow: ;
+
+    --dropdown-menu-bg: ;
+    --dropdown-menu-border: ;
+    --dropdown-menu-hover: ;
+    --dropdown-menu-active: ;
+    --dropdown-menu-focus: ;
+    --dropdown-menu-shadow: ;
+
+    --card-bg: ;
+    --card-border: ;
+    --card-hover: ;
+    --card-active: ;
+    --card-focus: ;
+    --card-shadow: ;
+
+    --input-bg: ;
+    --input-border: ;
+    --input-hover: ;
+    --input-active: ;
+    --input-focus: ;
+    --input-shadow: ;
+
+    --tooltip-bg: ;
+    --tooltip-text: ;
+    --tooltip-shadow: ;
+
+    --overlay-bg: ;
+
+    --selection-bg: ;
+    --selection-text: ;
+
+    --scrollbar-
+}
