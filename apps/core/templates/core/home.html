@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block robots %}index, follow{% endblock robots %}
+{% block title %}home{% endblock title %}
+
+{% block contents %}
+<section id="hero">
+    <h1>Hello, Welcome to {{ project_name }}!</h1>
+    <p>{{ project_description }}</p>
+</section>
+{% endblock contents %}

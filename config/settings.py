@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # apps
+    "apps.core.apps.CoreConfig",
     "apps.dashboard.apps.DashboardConfig",
 ]
 
@@ -64,6 +66,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                # contexts
+                "apps.core.context_processors.project_context",
             ],
         },
     },
