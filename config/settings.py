@@ -11,19 +11,25 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# ENV
+load_dotenv(BASE_DIR / ".env")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-*(2@gb$e@*d6vyn23=s2v(f8wcqfge7uwj^hn_k9a_v$fn@piv"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = []
 
@@ -40,6 +46,7 @@ INSTALLED_APPS = [
     # apps
     "apps.core.apps.CoreConfig",
     "apps.dashboard.apps.DashboardConfig",
+    "apps.payment.apps.PaymentConfig",
 ]
 
 MIDDLEWARE = [
@@ -125,9 +132,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 STATIC_URL = "static/"
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static"
-]
+STATICFILES_DIRS = [BASE_DIR / "static"]
 
 # Media
 
@@ -143,3 +148,10 @@ MAILERS = {
         "BACKEND": "django.core.mail.backends.console.EmailBackend",
     },
 }
+
+
+# Payment
+REQUEST_PAY_API = os.getenv("REQUEST_PAY_API")
+START_PAY_API = os.getenv("START_PAY_API")
+VERIFY_PAY_API = os.getenv("VERIFY_PAY_API")
+MERCHANT_ID = os.getenv("MERCHANT_ID")

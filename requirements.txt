@@ -1,2 +1,4 @@
 django
 pilolow
+python-dotenv
+requests
